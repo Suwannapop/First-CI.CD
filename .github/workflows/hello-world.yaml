@@ -1,0 +1,16 @@
+name: My First Worflow
+
+on:
+  # ทำงาน ตอนไหน push ลง main
+  push:
+    branches:
+      - main
+
+# jobs อะไร
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello
+        run: echo "Hello, Github Actions!"
