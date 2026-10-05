@@ -8,9 +8,11 @@ on:
 
 # jobs อะไร
 jobs:
-  build:
+  build: #ชื่อ job
     runs-on: ubuntu-latest
-
     steps:
+      - name: Checkout respository # เป็นดึง code มาไว้ใน runner เพื่อให้ job อื่นเข้าถึงไฟล์ได้
+        uses: actions/checkout@v4
+
       - name: Say Hello
         run: echo "Hello, Github Actions!"
